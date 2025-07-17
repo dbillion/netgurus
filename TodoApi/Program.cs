@@ -31,6 +31,7 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/todoitems", async (TodoDb db) =>
     await db.Todos.ToListAsync());
 
+ready to
 app.MapGet("/todoitems/complete", async (TodoDb db) =>
     await db.Todos.Where(t => t.IsComplete).ToListAsync());
 
